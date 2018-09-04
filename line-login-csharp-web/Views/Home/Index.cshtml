@@ -1,0 +1,18 @@
+﻿
+@model Line.Login.Models.TokenResponse
+@using System
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+
+    @Html.ActionLink("Login", "Login", null, new { @class = "btn btn-primary btn-lg" })
+    @if (Model != null)
+    {
+        <p style="word-wrap: break-word;">AccessToken: @Model.AccessToken</p>
+        <p>Name: @Model.JWTPayload.Name</p>
+        <p>MID: @Model.JWTPayload.Sub</p>
+        <img height="200" src="@Model.JWTPayload.Picture" />
+    }
+</div>
