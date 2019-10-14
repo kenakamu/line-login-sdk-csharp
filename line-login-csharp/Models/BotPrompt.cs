@@ -8,6 +8,6 @@ namespace Line.Login.Models
     public enum BotPrompt
     {
         Normal,
-        Aggresive
+        Aggressive
     }
 }
